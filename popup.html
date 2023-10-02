@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>链接检测</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+    }
+    .form-control {
+      display: block;
+      width: 100%;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      appearance: none;
+      background-color: var(--bs-body-bg);
+      background-clip: padding-box;
+      border: 1px solid #dee2e6;
+      border-radius: 0.375rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    }
+    .form-control:focus {
+      color: #212529;
+      background-color: var(--bs-body-bg);
+      border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
+    }
+    .input-group {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      width: 100%
+    }
+    .input-group>.form-control {
+      position: relative;
+      flex: 1 1 auto;
+      width: 1%;
+      min-width: 0
+    }
+    .input-group-text {
+      display: flex;
+      align-items: center;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: center;
+      white-space: nowrap;
+      background-color: var(--bs-tertiary-bg);
+      border: 1px solid #dee2e6;
+      border-radius: 0.375rem;
+    }
+    .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0
+    }
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+      margin-left: calc(1px * -1);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #0d6efd;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid #0d6efd;
+      border-radius: 0.375rem;
+      background-color: transparent;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    .btn:hover {
+      color: #fff;
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
+    .right {
+      display: inline-block;
+      margin-left: 20px;
+      width: 186px
+    }
+    .mb-3 {
+      margin-bottom: 1rem !important
+    }
+  </style>
+</head>
+<body>
+  <div class="mb-3">
+    <div class="input-group">
+      <span class="input-group-text">表格链接</span>
+      <input type="text" class="form-control" id="sheetUrl">
+    </div>
+  </div>
+  <button type="button" class="btn" id="getData">更新列表</button>
+  <div class="mb-3 right">
+    <div class="input-group">
+      <span class="input-group-text">链接列</span>
+      <input type="text" class="form-control" id="column">
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
